@@ -1,0 +1,56 @@
+Step 1
+Import all the essential libraries:-
+
+
+Step 2:
+Read the train and test datasets from CSV files:-
+
+
+Step 3:
+Fill any missing or null values in the train and test datasets with an empty string:-
+
+
+Step 4:
+Filtration of the PRODUCT_LENGTH done for dealing with noise:-
+
+
+Step 5:
+Remove duplicates based on the 'BULLET_POINTS' column in the train dataset:-
+
+Step 6: 
+Create a new column 'text' in the train and test datasets by copying the 'BULLET_POINTS' column:
+
+
+Step 7:
+Convert the text data to lowercase and remove any non-alphanumeric characters from the 'text' column in both the train and test datasets using a lambda function and regular expressions:-
+
+
+Step 8:
+Create CountVectorizer and TfidfVectorizer objects to convert the text data into numerical feature vectors. 'stop_words' argument is used to remove commonly occurring words in the English language from the text data.
+
+
+Step 9:
+Fit and transform the 'text' column of the train dataset using CountVectorizer and TfidfVectorizer, respectively, to obtain the feature vectors of the train dataset:-
+
+
+Step 10:
+Transform the 'text' column of the test dataset using the previously fit CountVectorizer and TfidfVectorizer objects to obtain the feature vectors of the test dataset:-
+
+Step 11:
+Concatenate the CountVectorizer and TfidfVectorizer feature vectors of the train and test datasets horizontally using the hstack() method of the scipy.sparse library.
+
+
+Step 12:
+Split the train dataset into train and validation sets using the train_test_split() function of the sklearn library.
+
+
+Step 13:
+Define an instance of the XGBRegressor class and trains a model using the fit method.Create a pandas dataframe with two columns 'PRODUCT_ID' and 'PRODUCT_LENGTH' and store the predictions of the test dataset in the 'PRODUCT_LENGTH' column. Write this dataframe to a CSV file 'good_one.csv'
+
+
+
+-------------------------------------------------------------------END--------------------------------------------------------------------------------------
+
+
+
+
